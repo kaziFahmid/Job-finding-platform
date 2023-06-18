@@ -144,7 +144,7 @@ let handleGoogle =()=>{
                 />
                 <p className='text-start text-secondary'>Explore endless opportunities and find your dream job with our powerful job search platform.</p>
               </div>
-              <div className='bg-white shadow rounded py-4 px-5 mt-5 '>
+              <form   onSubmit={handleLoginSubmit} className='bg-white shadow rounded py-4 px-5 mt-5 '>
                 <div>
                   <h1>Welcome to <b className='text-warning'>JobNexus</b> <b className='text-warning'>Login</b></h1>
 
@@ -154,7 +154,7 @@ let handleGoogle =()=>{
                   <button className='btn btn-light w-100 mb-4 shadow-sm d-flex justify-content-center gap-2 align-items-center'onClick={handleGoogle}><img src='https://imagizer.imageshack.com/img922/1517/bT6MYi.png' style={{width:'20px '}}/>Google</button>
 
                 </div>
-                <form onSubmit={handleLoginSubmit}>
+                <div >
               
       
                 <div className='d-flex justify-content-between align-items-center  rounded' style={{backgroundColor:'#ECECEC'}}>
@@ -176,9 +176,9 @@ let handleGoogle =()=>{
                   <button  disabled={isDisabled} className=' btn btn-warning border-0 p-2 rounded w-100 mt-4 text-white'>Login</button>
                 </div>
                 <p className='text-center mt-3 text-secondary'>Don’t have an account? <Link to='/signup'className='text-warning'>Register</Link></p>
-                </form>
+                </div>
                
-              </div>
+              </form>
               
             </div>
           </div>
