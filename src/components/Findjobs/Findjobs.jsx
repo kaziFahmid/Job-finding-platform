@@ -20,7 +20,7 @@ export default function Findjobs() {
   }, [category, jobType, location, search,catg,asc]);
 
   const fetchJobs = () => {
-    fetch(`https://job-server-eight.vercel.app/jobs?category=${category}&jobType=${jobType}&location=${location}&search=${search}&sort=${asc?'asc':'desc'}`)
+    fetch(`https://job-server-eight.vercel.app/jobs?category=${catg?catg:category}&jobType=${jobType}&location=${location}&search=${search}&sort=${asc?'asc':'desc'}`)
       .then((res) => res.json())
       .then((data) => {
  
