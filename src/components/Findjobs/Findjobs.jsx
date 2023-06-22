@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Jobs from '../Jobs/Jobs';
 import { TailSpin } from  'react-loader-spinner'
-import {   useParams } from 'react-router-dom';
+import {   useNavigate, useParams } from 'react-router-dom';
 export default function Findjobs() {
   const [jobPosts, setJobPosts] = useState([]);
   const [category, setCategory] = useState('');
@@ -13,7 +13,7 @@ export default function Findjobs() {
   const [asc, setAsc] = useState(true);
   const searchField = useRef(null);
   const{catg}=useParams()
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchJobs();
